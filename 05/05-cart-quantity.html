@@ -21,17 +21,43 @@
     </button>
 
     <button onClick="
-    counter += 2; 
-    console.log(`Cart quantity: ${counter}`)">+2</button>
+      counter += 2; 
+      console.log(`Cart quantity: ${counter}`)">
+      
+      +2
+    </button>
     
     <button onClick="
-    counter += 3;
-    console.log(`Cart quantity: ${counter}`)">+3</button>
+      counter += 3;
+      console.log(`Cart quantity: ${counter}`)">
+    
+    +3
+    </button>
 
     <button onClick="
-    counter = 0;
-    console.log(`Cart quantity: ${counter}`)">Reset Cart</button>
+      counter = 0;
+      console.log(`Cart quantity: ${counter}`)">
+    
+    Reset Cart
+    </button>
 
+    <button onClick="
+        counter --;
+        console.log(`Cart quantity: ${counter}`)">
+      Remove from Cart
+    </button>
+
+    <button onClick="
+        counter -= 2;
+        console.log(`Cart quantity: ${counter}`)">
+      -2
+    </button>
+    
+    <button onClick="
+        counter -= 3;
+        console.log(`Cart quantity: ${counter}`)">
+      -3 
+    </button>
     <script>
       let counter = 0;
 
