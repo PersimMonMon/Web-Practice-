@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Lesson 5 Challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8"/>
+    <style>
+    </style>
+  </head>
+
+  <body>
+    <p>Calculator</p>
+
+    <div>
+      <button
+      onClick="
+        calculation += '1'; 
+        console.log(calculation);
+      ">
+      1    
+      </button>
+
+      <button
+      onClick="
+        calculation += '2'; 
+        console.log(calculation);
+      ">
+      2    
+      </button>
+
+      <button
+      onClick="
+        calculation += '3'; 
+        console.log(calculation);
+      ">
+      3    
+      </button>
+
+      <button
+      onClick="
+        calculation += ' + '; 
+        console.log(calculation);
+      ">
+      +    
+      </button>
+    </div>
+    
+    <div>
+      <button
+      onClick="
+        calculation += '4'; 
+        console.log(calculation);
+      ">
+      4    
+      </button>
+
+      <button
+      onClick="
+        calculation += '5'; 
+        console.log(calculation);
+      ">
+      5    
+      </button>
+
+      <button
+      onClick="
+        calculation += '6'; 
+        console.log(calculation);
+      ">
+      6    
+      </button>
+
+      <button
+      onClick="
+        calculation += ' - '; 
+        console.log(calculation);
+      ">
+      -    
+      </button>
+    </div>
+    
+    <div>
+      <button
+      onClick="
+        calculation += '7'; 
+        console.log(calculation);
+      ">
+      7    
+      </button>
+      
+      <button
+      onClick="
+        calculation += '8'; 
+        console.log(calculation);
+      ">
+      8    
+      </button>
+
+      <button
+      onClick="
+        calculation += '9'; 
+        console.log(calculation);
+      ">
+      9    
+      </button>
+
+      <button
+      onClick="
+        calculation += ' * '; 
+        console.log(calculation);
+      ">
+      *    
+      </button>
+    </div>
+
+    <div>
+      <button
+      onClick="
+        calculation += '0'; 
+        console.log(calculation);
+      ">
+      0    
+      </button>
+      
+      <button
+      onClick="
+        calculation += '.'; 
+        console.log(calculation);
+      ">
+      .    
+      </button>
+      
+      <!-- eval converts calculation string into math and executes it, it can run any expression -->
+      <button
+      onClick="
+        calculation = eval(calculation); 
+        console.log(calculation);
+      ">
+      =
+      </button>
+
+      <button
+      onClick="
+        calculation += '/'; 
+        console.log(calculation);
+      ">
+      /    
+      </button>
+    </div>
+
+    <div>
+      <button onClick="
+        calculation = '';
+        console.log('Cleared.')
+      ">
+      Clear
+      </button>
+    </div>
+    
+    <script>
+      let calculation = "";
+    </script>
+  </body>
+</html>
