@@ -15,22 +15,57 @@
 
     <!-- Math.random generates 0 <= number < 1 -->
     <button onclick="
-      const randomNum = (Math.random());
-      let computer = '';
+      const randomNum = Math.random();
+      let computerMove = '';
+
       if (randomNum < 1/3) {
-       computer = 'rock';
+        computerMove = 'rock';
       } else if (randomNum > 1/3 && randomNum < 2/3){
-       computer = 'paper';
+        computerMove = 'paper';
       } else {
-       computer = 'Scissors';
+      // note var doesn;t follow rule of scope, code in scope doesn't get restricted only to scope 
+      computerMove = 'scissors';
       };
-      console.log(computer)
+      console.log(computerMove)
       console.log(randomNum)
+
+      let result = '';
+
+      if (computerMove === 'rock') {
+        result = 'Tie.';
+      } else if (computerMove === 'paper'){
+        result = 'You lose.';
+      } else if (computerMove === 'scissors') {
+        result = 'You win.';
+      }
+
+      alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
       ">
       Rock
     </button>
 
-    <button>
+    <button onclick="
+
+    if (randomNum < 1/3) {
+      computerMove = 'rock';
+    } else if (randomNum > 1/3 && randomNum < 2/3){
+      computerMove = 'paper';
+    } else {
+    // note var doesn;t follow rule of scope, code in scope doesn't get restricted only to scope 
+    computerMove = 'scissors';
+    };
+    console.log(computerMove)
+    console.log(randomNum)
+
+    if (computerMove === 'rock') {
+      result = 'Tie.';
+    } else if (computerMove === 'paper'){
+      result = 'You lose.';
+    } else if (computerMove === 'scissors') {
+      result = 'You win.';
+    }
+
+    alert(`You picked rock. Computer picked ${computerMove}. ${result}`)">
       Paper
     </button>
 
@@ -39,6 +74,7 @@
     </button>
 
     <script>
+
     </script>
   </body>
 </html>
