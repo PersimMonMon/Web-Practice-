@@ -19,12 +19,12 @@
       let computerMove = '';
 
       if (randomNum < 1/3) {
-        computerMove = 'rock';
+       computerMove = 'rock';
       } else if (randomNum > 1/3 && randomNum < 2/3){
-        computerMove = 'paper';
+       computerMove = 'paper';
       } else {
       // note var doesn;t follow rule of scope, code in scope doesn't get restricted only to scope 
-      computerMove = 'scissors';
+       computerMove = 'scissors';
       };
       console.log(computerMove)
       console.log(randomNum)
@@ -46,30 +46,62 @@
 
     <button onclick="
 
-    if (randomNum < 1/3) {
-      computerMove = 'rock';
-    } else if (randomNum > 1/3 && randomNum < 2/3){
-      computerMove = 'paper';
-    } else {
-    // note var doesn;t follow rule of scope, code in scope doesn't get restricted only to scope 
-    computerMove = 'scissors';
-    };
-    console.log(computerMove)
-    console.log(randomNum)
+        const randomNum = Math.random();
+        let computerMove = '';
 
-    if (computerMove === 'rock') {
-      result = 'Tie.';
-    } else if (computerMove === 'paper'){
-      result = 'You lose.';
-    } else if (computerMove === 'scissors') {
-      result = 'You win.';
-    }
+        if (randomNum < 1/3) {
+        computerMove = 'rock';
+        } else if (randomNum > 1/3 && randomNum < 2/3){
+        computerMove = 'paper';
+        } else {
+        // note var doesn;t follow rule of scope, code in scope doesn't get restricted only to scope 
+        computerMove = 'scissors';
+        };
+        console.log(computerMove)
+        console.log(randomNum)
 
-    alert(`You picked rock. Computer picked ${computerMove}. ${result}`)">
+        let result = '';
+
+        if (computerMove === 'rock') {
+          result = 'You win.';
+        } else if (computerMove === 'paper'){
+          result = 'Tie.';
+        } else if (computerMove === 'scissors') {
+          result = 'You lose.';
+        }
+
+        alert(`You picked paper. Computer picked ${computerMove}. ${result}`);
+      ">  
       Paper
     </button>
 
-    <button>
+    <button onclick="
+      const randomNum = Math.random();
+      let computerMove = '';
+
+      if (randomNum < 1/3) {
+      computerMove = 'rock';
+      } else if (randomNum > 1/3 && randomNum < 2/3){
+      computerMove = 'paper';
+      } else {
+      // note var doesn;t follow rule of scope, code in scope doesn't get restricted only to scope 
+      computerMove = 'scissors';
+      };
+      console.log(computerMove)
+      console.log(randomNum)
+
+      let result = '';
+
+      if (computerMove === 'rock') {
+        result = 'You lose.';
+      } else if (computerMove === 'paper'){
+        result = 'You win.';
+      } else if (computerMove === 'scissors') {
+        result = 'Tie.';
+      }
+
+      alert(`You picked scissors. Computer picked ${computerMove}. ${result}`);
+    ">
       Scissors
     </button>
 
