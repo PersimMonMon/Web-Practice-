@@ -10,7 +10,9 @@
   </head>
 
   <body>
+    <p>
     <script>
+      /*
       true
       false
 
@@ -41,8 +43,26 @@
       } else {
         console.log('You can drive');
       }
+      */
 
+      // the falsy values in JS are false, 0, ' ', NaN, undefedined, null 
 
+      let hello;
+      console.log(hello);
+      console.log(5>3);
+
+      /* shortcuts for if-statememts: 
+          ternary operator ?:
+          guard operator && 
+          default operator ||
+      */
+
+      // ternary operator. sees if true or not, if true result becomes 'true', if not it becomes 'falsy'
+      const result = true ? 'true' : 'falsy';
+      console.log(result);
+
+      // this results in message being 'hello'. If the first input is true and so is the second, the value of message is whatever the second input is. If the first input is negative aka false, value of message is false and short circuits to stopping at false value. Same concept for default operator. 
+      const message = 5 && 'hello';
     </script>
   </body>
 </html>
