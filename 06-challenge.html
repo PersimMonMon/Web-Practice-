@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cart Quantity</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+    </style>
+  </head>
+
+  <body>
+    <p>Cart Quantity</p>
+
+    <button onClick="console.log(`Cart quantity: ${counter}`)">Show Quantity</button>
+
+    <button onClick="
+      if (counter >= 10) {
+        console.log('The cart is full')
+      } else {
+        counter ++;
+        console.log(`Cart quantity: ${counter}`);
+      };
+      ">
+      
+      Add to Cart
+    </button>
+
+    <button onClick="
+      counter += 2; 
+      console.log(`Cart quantity: ${counter}`)">
+      
+      +2
+    </button>
+    
+    <button onClick="
+      counter += 3;
+      console.log(`Cart quantity: ${counter}`)">
+    
+    +3
+    </button>
+
+    <button onClick="
+      counter = 0;
+      console.log(`Cart quantity: ${counter}`)">
+    
+    Reset Cart
+    </button>
+
+    <button onClick="
+        if (counter <= 0) {
+          console.log('Not enough items in the cart')
+        } else {
+          counter --; 
+          console.log(`Cart quantity ${counter}`)
+        }
+        ">
+      Remove from Cart
+    </button>
+
+    <button onClick="
+        counter -= 2;
+        console.log(`Cart quantity: ${counter}`)">
+      -2
+    </button>
+    
+    <button onClick="
+        counter -= 3;
+        console.log(`Cart quantity: ${counter}`)">
+      -3 
+    </button>
+    <script>
+      let counter = 0;
+
+    </script>
+  </body>
+
+</html>
