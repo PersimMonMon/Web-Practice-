@@ -15,8 +15,6 @@
 
     <!-- Math.random generates 0 <= number < 1 -->
     <button onclick="
-      
-      pickComputerMove(); 
 
       if (computerMove === 'rock') {
         result = 'Tie.';
@@ -32,8 +30,6 @@
     </button>
 
     <button onclick="
-
-      pickComputerMove();
 
       if (computerMove === 'rock') {
         result = 'You win.';
@@ -66,10 +62,10 @@
     </button>
 
     <script>
-      let computerMove = '';
       let result = '';
       function pickComputerMove() {
         const randomNum = Math.random();
+        let computerMove = '';
 
         if (randomNum < 1/3) {
         computerMove = 'rock';
@@ -79,7 +75,10 @@
         // note var doesn;t follow rule of scope, code in scope doesn't get restricted only to scope 
         computerMove = 'scissors';
         };
+
+        return computerMove;
       }
+      const computerMove = pickComputerMove();
     </script>
   </body>
 </html>

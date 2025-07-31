@@ -19,7 +19,9 @@ Lesson 6:
 
 Lesson 7
 
-Functions - lets us reuse code
+
+Notes: 
+Functions - lets us reuse code, easier to update code in future, can contain a return 
   Rules of functions: 
     1. Can't use special words (ex: function)
     2. Can't start with a number
