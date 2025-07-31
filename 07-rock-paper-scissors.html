@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Rock Paper Scissors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+    </style>
+  </head>
+
+  <body>
+    <p>Rock Paper Scissors</p>
+
+    <!-- Math.random generates 0 <= number < 1 -->
+    <button onclick="
+      
+      pickComputerMove(); 
+
+      if (computerMove === 'rock') {
+        result = 'Tie.';
+      } else if (computerMove === 'paper'){
+        result = 'You lose.';
+      } else if (computerMove === 'scissors') {
+        result = 'You win.';
+      }
+
+      alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
+      ">
+      Rock
+    </button>
+
+    <button onclick="
+
+      pickComputerMove();
+
+      if (computerMove === 'rock') {
+        result = 'You win.';
+      } else if (computerMove === 'paper'){
+        result = 'Tie.';
+      } else if (computerMove === 'scissors') {
+        result = 'You lose.';
+      }
+
+      alert(`You picked paper. Computer picked ${computerMove}. ${result}`);
+      ">  
+      Paper
+    </button>
+
+    <button onclick="
+    
+      pickComputerMove();
+
+      if (computerMove === 'rock') {
+        result = 'You lose.';
+      } else if (computerMove === 'paper'){
+        result = 'You win.';
+      } else if (computerMove === 'scissors') {
+        result = 'Tie.';
+      }
+
+      alert(`You picked scissors. Computer picked ${computerMove}. ${result}`);
+    ">
+      Scissors
+    </button>
+
+    <script>
+      let computerMove = '';
+      let result = '';
+      function pickComputerMove() {
+        const randomNum = Math.random();
+
+        if (randomNum < 1/3) {
+        computerMove = 'rock';
+        } else if (randomNum > 1/3 && randomNum < 2/3){
+        computerMove = 'paper';
+        } else {
+        // note var doesn;t follow rule of scope, code in scope doesn't get restricted only to scope 
+        computerMove = 'scissors';
+        };
+      }
+    </script>
+  </body>
+</html>
