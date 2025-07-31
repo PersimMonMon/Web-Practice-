@@ -16,3 +16,13 @@ Lesson 6:
 4. Alogirthms (created Rock Paper Scissors)
 5. Truthy and Falsy values
 6. Shortscuts for if-statements (ternary, guard, default)
+
+Lesson 7
+
+Functions - lets us reuse code
+  Rules of functions: 
+    1. Can't use special words (ex: function)
+    2. Can't start with a number
+    3. Can't use special characters except: $_
+
+    Use camelCase!
