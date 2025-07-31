@@ -18,13 +18,19 @@ Lesson 6:
 6. Shortscuts for if-statements (ternary, guard, default)
 
 Lesson 7
-
+  1. Functions = let us reuse code
+  2. Return = get a value out of a function 
+  3. Parameters = put values into a function
+  4. Improved the code for Rock, Paper, Scissors 
 
 Notes: 
 Functions - lets us reuse code, easier to update code in future, can contain a return 
-  Rules of functions: 
+
+  Rules of functions and parameters: 
     1. Can't use special words (ex: function)
     2. Can't start with a number
     3. Can't use special characters except: $_
 
     Use camelCase!
+
+  Scope can help prevent naming conflits. 
