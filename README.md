@@ -43,3 +43,6 @@ Lesson 8:
     Makes our code more organized into one object 
     Use multiple values together 
     Can be used to display all values at once 
+
+    Dot Notation - to access property of objects
+    Bracket Notation - let us use properties that don't work with dot notation
