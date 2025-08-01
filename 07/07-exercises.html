@@ -53,22 +53,44 @@
       convertTemp(25, 'C');
       convertTemp(86, 'F');
 
-      function convertLength(length, from, to) {
+      function convertLength(length, from, to,) {
         let conversion = '';
+
+        // check if units correct, if not we return 
+        const validUnits = ['miles', 'km', 'ft']
+        if (!validUnits.includes(from)) {
+          console.log(`Invalid unit: ${from}`)
+          return
+        } else if (!validUnits.includes(to)) {
+          console.log(`Invalid unit: ${to}`)
+          return
+        };
 
         if (from === 'miles' && to === "km") {
           conversion = length * 1.6 
         } else if (from === 'km' && to === 'miles') {
           conversion = length / 1.6  
-        } else {
+        } else if (from === 'miles' && to === 'ft') {
+          conversion = length * 5280
+        } else if (from === 'km' && to === 'ft') {
+          conversion = length * 3281
+        } else if (from === to) {
           conversion = length
         };
+
         console.log(`${conversion}${to}`);
       };
 
       convertLength(50, 'miles', 'km'); // 80km
       convertLength(32, 'km', 'miles'); // 20miles
       convertLength(50, 'km', 'km'); // 50km
+      convertLength(5, 'miles', 'km'); // 8km
+      convertLength(5, 'miles', 'ft'); // 26400ft 
+      convertLength(5, 'km', 'ft');  // 16405ft
+
+      convertLength(5, 'km', 'fsfs');
+
+
     </script> 
   </body>
 </html>
