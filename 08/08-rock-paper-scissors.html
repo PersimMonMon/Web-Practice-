@@ -28,22 +28,7 @@
     </button> 
 
     <script>
-      const gameTracker = {
-        Wins: 0,
-        Losses: 0,
-        Ties: 0 
-      };
-
-      function updateTracker(getResult) {
-        if (getResult === 'You win.') {
-          gameTracker.Wins ++ 
-        } else if (getResult === 'You lose.') {
-          gameTracker.Losses ++ 
-        } else if (getResult === 'Tie.') {
-          gameTracker.Ties ++ 
-        };
-        return gameTracker;
-      }
+      const gameTracker = JSON.parse(localStorage.getItem('gameTracker'));
 
       function getResult(userMove) {
         let result = '';
@@ -74,7 +59,15 @@
             result = 'Tie.'
           }};
 
-          updateTracker(result); //returns a object
+          if (result === 'You win.') {
+            gameTracker.Wins += 1
+          } else if (result === 'You lose.') {
+            gameTracker.Losses += 1
+          } else if (result === 'Tie.') {
+            gameTracker.Ties += 1
+          };
+
+          localStorage.setItem('gameTracker', JSON.stringify(gameTracker));
 
           alert(`You chose ${userMove}. Computer chose ${computerMove}. ${result}
 Wins: ${gameTracker.Wins}, Losses: ${gameTracker.Losses}, Ties: ${gameTracker.Ties}`)

@@ -39,10 +39,25 @@ Lesson 8:
 
     Notes: 
     Object - groups multiple values together 
-
+  
     Makes our code more organized into one object 
     Use multiple values together 
     Can be used to display all values at once 
+    Objects themselves are also values 
+    Functions can also be saved in objects (aka Method)
 
-    Dot Notation - to access property of objects
+    Dot Notation - to access property of objects (use by default)
+
     Bracket Notation - let us use properties that don't work with dot notation
+
+    JSON (JavaScript Object Notation)
+      -a syntax
+      -similar to Javascript object, but has less features
+      -difference from JS object: must use double quotes for propery and values, and does not support functions 
+      -JSON is more universal, use JSON when we send data between computers 
+      -use when we store data 
+      -Converts JS Object into JSON 
+
+    Variables are temporary. If we refresh or close the page, all previous data of our variables get deleted. Therefore, we should use JSON to save our data.
+
+    
