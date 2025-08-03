@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lesson 8 Exercises</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  
+  <body>
+    <script>
+      const basketball = {
+        name: 'basketball',
+        price: 2950
+      }
+      console.log(basketball);
+
+      basketball.price += 500
+      console.log(basketball);
+
+      basketball['delivery-time'] = '3 days';
+      console.log(basketball);
+
+      product1 = {
+        name: 'ball1',
+        price: 25
+      }
+      
+      product2 = {
+        name: 'ball2',
+        price: 30
+      }
+
+      function comparePrice(product1, product2) {
+        if (product1.price < product2.price) {
+          return console.log(product1.price)
+        } else {
+          return console.log(product2.price)
+        }
+      };
+
+      comparePrice(product1, product2); 
+    </script>
+  </body>
+<html>
