@@ -58,6 +58,51 @@
       // JSON into object 
       const jsonString = JSON.stringify(product2)
       console.log(JSON.parse(jsonString));
+
+      const object1 = {
+        message: 'hello'
+      }
+
+      const object2 = object1 
+
+      const object4 = {
+        message: 'Good Job!',
+        price: 10
+      };
+
+      // lets try comparing inside properties to see if they match cause comparing two objects that have same property and values results in false due to it comparing reference points 
+
+      // const message = object4.message;
+      const { message, price} = object4; // we're using destructuring, this line same as line above 
+      console.log(message)
+      console.log(price)
+
+      // shorthand property 
+      // we don't actually write whole thing out, instead of writing: message: message we can just do message 
+      const object = {
+        //message: message // you would console.log(object.message) but with shorthand property you can make it console.log(message)
+        message,
+        /*
+        happy: function function1() {
+          console.log('hey there')
+        }
+        */
+        happy() {
+          console.log('hey there')
+        }
+      };
+
+      console.log(message);
+      object.happy();
+
+      
+      
+
+     
+
+
+
+
     </script>
   </body>
 </html>

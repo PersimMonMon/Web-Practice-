@@ -36,6 +36,11 @@ Lesson 7:
       Scope can help prevent naming conflits. 
 
 Lesson 8:
+  1. Objects - group related values together
+  2. Added a score to Rock Paper Scissors 
+  3. Built-in objects (JSON,localStorage)
+  4. More details (null, auto-boxing, references)
+  5. Shortcuts (destructuring, shorthand property, shorthand method)
 
     Notes: 
     Object - groups multiple values together 
@@ -59,5 +64,25 @@ Lesson 8:
       -Converts JS Object into JSON 
 
     Variables are temporary. If we refresh or close the page, all previous data of our variables get deleted. Therefore, we should use JSON to save our data.
+
+
+    FALSY VALUES: false, 0, ' ', NaN, undefined, null
+
+    NULL VS UNDEFINED:
+      null = intentionally want something to be empty 
+
+    AUTO-BOXING: JS wraps string into special object first. For example, console.log('hello.length). Here 'hello' is auto boxed for the length method. Auto-boxing can be applied to numbers and booleans, but not null and undefined.  
+
+    Objects are REFERENCES. 
+    For example, 
+    const object1 = {
+      message: 'hello'
+    }; 
+    const object2 = object1;  //object2 has same reference as object1 (point to same object in computer's memory)
+
+    object1.message = 'Good job!';   // will change the const object into message: 'Good job!' even though it was a const 
+
+    If we create a new object with same property and values as object1, it will result in falsy because you're comparing references not what's inside. Ex:
+    const object3 = {message: 'Good Job!'} -> console.log(object3 === object1) results in false. 
 
     
