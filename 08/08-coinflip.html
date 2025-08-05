@@ -17,35 +17,29 @@
       tails
     </button>
     <script>
-        let score = {
-          wins: 0,
-          losses: 0
-        }
+
+      let score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0
+      }
+      console.log(score);
 
       function playGame(guess) {
         const randomNum = Math.random(); 
         const result = (randomNum < 0.5 ? 'heads' : 'tails');
 
-        if (guess === 'heads') {
-          if (guess === result) {
-            console.log('You win!')
-            score.wins += 1;
-          } else {
-            console.log('You lose!')
-            score.losses -= 1; 
-          };
+        console.log(score);
+
+        if (guess === result) {
+          console.log('Tou win!')
+          score.wins += 1
+        } else {
+          console.log('You lose!')
+          score.losses += 1 
         };
 
-        if (guess === 'tails') {
-          if (guess === result) {
-            console.log('You win!')
-            score.wins += 1;
-          } else {
-            console.log('You lose!')
-            score.losses -= 1; 
-          }
-        };
-
+        // reminder: setItem expects a string for both arguments 
+        localStorage.setItem('score', JSON.stringify(score))
         console.log(score);
       };
 
