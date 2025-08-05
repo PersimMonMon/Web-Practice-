@@ -17,17 +17,14 @@
       tails
     </button>
     <script>
-
-
-
-      function playGame(guess) {
-        const randomNum = Math.random(); 
-        const result = (randomNum < 0.5 ? 'heads' : 'tails');
-
         let score = {
           wins: 0,
           losses: 0
         }
+
+      function playGame(guess) {
+        const randomNum = Math.random(); 
+        const result = (randomNum < 0.5 ? 'heads' : 'tails');
 
         if (guess === 'heads') {
           if (guess === result) {
