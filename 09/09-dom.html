@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <button>
+      Hello
+    </button>
+
+    <button class="js-button">
+      Second button
+    </button>
+    <script>
+      
+      console.log(document.querySelector('button'));
+      // create a hello button, change innerHTML of it to 'Changed'
+      document.querySelector('button').innerHTML = 'Changed'
+      
+
+      // make a second button and change it to 'Changed', save this querySelector into a const 
+      const buttonElement = document.querySelector('.js-button')
+      console.log(buttonElement);
+      
+
+
+
+
+
+
+      /*
+      document.title = 'Changed';
+      console.log(document.title);
+
+      console.log(document.body);
+      console.log(typeof document.body);   
+
+      //console.log(document.body.innerHTML)
+
+      
+      // DOM = document object (another built-in object)
+      document.body.innerHTML = 'hello';
+      document.title = 'Good job';
+      // document object represents/models the webpage hence its name DOM 
+      */
+
+    </script>
+  </body>
+</html>

@@ -85,4 +85,11 @@ Lesson 8:
     If we create a new object with same property and values as object1, it will result in falsy because you're comparing references not what's inside. Ex:
     const object3 = {message: 'Good Job!'} -> console.log(object3 === object1) results in false. 
 
+Lesson 9:
+
+    -DOM combines JS and HTML together 
+    method = function saved inside object
+    -document.querySelector() lets us get any element from the page and put it inside JS  (parameter is a string)
+    -Every HTML element has a property .innerHTML
+
     
