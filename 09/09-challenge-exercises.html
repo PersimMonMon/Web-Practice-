@@ -1,16 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Lesson 9 Exercises</title>
+    <title>Lesson 9 Challeneges</title>
   </head>
+
   <body>
+    <button>
+      Show Quantity
+    </button>
+
+    <button>
+      Add to Cart 
+    </button>
+
+    <button onclick="
+    addTotal(2);
+    ">
+      +2
+    </button>
+
+    <button onclick="
+    addTotal(3);
+    ">
+      +3
+    </button>
+
+    <button onclick="
+    addTotal(4);
+    ">
+      +4
+    </button>
+  
+    <button onclick="
+    addTotal(5);
+    ">
+      +5
+    </button>
+
+    <button onclick="
+    minusTotal(1);
+    ">
+      Remove from cart 
+    </button>
+
+    <button onclick="
+    minusTotal(2);
+    ">
+      -2
+    </button>
+
+    <button onclick="
+    minusTotal(3);
+    ">
+      -3
+    </button>
+
+    <p class="js-paragraph"></p>
+
+    <script>
+      let totalQuantity = JSON.parse(localStorage.getItem('totalQuantity')) || 0;
+
+      function addTotal(amount) {
+        totalQuantity += amount
+        console.log(totalQuantity)
+        document.querySelector('.js-paragraph').innerText = (`Cart quantity: ${totalQuantity}`);
+
+        localStorage.setItem('totalQuantity', JSON.stringify(totalQuantity));
+      };
+
+      function minusTotal(amount) {
+
+        if (totalQuantity >= amount) {
+        totalQuantity -= amount 
+        console.log(totalQuantity)
+        document.querySelector('.js-paragraph').innerText = (`Cart quantity: ${totalQuantity}`);
+
+        localStorage.setItem('totalQuantity', JSON.stringify(totalQuantity));
+        } else {
+          alert('Error: not valid action');
+        };
+      };
+
+      document.querySelector('.js-paragraph').innerText = (`Cart quantity: ${totalQuantity}`);
+
+    </script> 
+
+
+
+
+
+
+    <!--
     <input class="js-input" onkeyup="
-      const inputElement = document.querySelector('.js-input')
-      document.querySelector('.js-message').innerText = inputElement.value;
-    "></input>
-
-    <p class ="js-message"></p>
-
- 
+      const fullInput = document.querySelector('.js-input');
+      document.querySelector('.js-paragraph').innerText = fullInput.value
+      ">
+    <p class="js-paragraph"></p>
+    -->
   </body>
 </html>
