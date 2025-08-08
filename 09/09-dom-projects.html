@@ -4,24 +4,73 @@
     <title>DOM Projects</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      div {
+        padding: 20px 0px 20px 0px;
+      }
+    </style>
   </head>
 
   <body>
-    <p>YouTube Subscribe Button</p>
-    <button onclick="
-    changeButtonElement();
-    " class="js-subscribe-button">
-      Subscribe
-    </button>
+    <div>
+      <p>YouTube Subscribe Button</p>
+      <button onclick="
+      changeButtonElement();
+      " class="js-subscribe-button">
+        Subscribe
+      </button>
+    </div>
 
-    <p>Rock Paper Scissors</p> 
-    <a href= >
-      Click here
-    </a>
+    <div>
+      <p>Rock Paper Scissors</p> 
+      <a href= http://127.0.0.1:5500/09/09-rock-paper-scissors.html>
+        Click here
+      </a>
+    </div>
+    
+    <div>
+      <p>Amazon Shipping Calculator</p>
+      <p>Orders under $40 = +$10 shipping.</p>
+      <p>Orders over $45 = FREE shipping.</p> 
+      <input class="js-input" placeholder="Cost of order" onkeydown="
+        handleCostKeydown(event);
+      "> <!--input is a void-->
+      <button onclick="
+        calculateTotal();
+      ">
+        Calculate
+      </button>
+      <p class="js-totalCost"></p>
+      <p><a>CSS version of these projects<a></p>
+    </div>
+
     <script>
+      function handleCostKeydown(event) {
+        if (event.key === 'Enter') {
+          calculateTotal();
+        }};
+
+      //get input and save to const 
+      function calculateTotal() {
+        const inputElement = document.querySelector('.js-input')
+        // instead of using innerHTML or innerText, we use value to access information entered inside a input box 
+        let cost = (inputElement.value)
+
+        // we have access to cost now, take the cost and do if statement to check if under 40 or not 
+
+        if (cost < 40) {
+          // turn cost into a integer
+          cost = Number(cost);
+          cost += 10 
+          // turn cost back into a string 
+          cost = String(cost);
+        };
+      
+        document.querySelector('.js-totalCost').innerHTML = cost;
+      };
+      
+
       // once person clicks on Subscribe, change it into subscribed 
-
-
       function changeButtonElement() {
         const buttonElement = document.querySelector('.js-subscribe-button')
 

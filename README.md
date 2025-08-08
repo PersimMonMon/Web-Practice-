@@ -91,5 +91,10 @@ Lesson 9:
     method = function saved inside object
     -document.querySelector() lets us get any element from the page and put it inside JS  (parameter is a string)
     -Every HTML element has a property .innerHTML
+    -Whenever we get a value from the DOM, the value will be a string .
+    
+    Every event listener gets an event object 
+    -onclick and onkeydown are event listeners 
+    -clicks and keydowns are events 
 
     
