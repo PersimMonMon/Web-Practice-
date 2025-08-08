@@ -86,6 +86,13 @@ Lesson 8:
     const object3 = {message: 'Good Job!'} -> console.log(object3 === object1) results in false. 
 
 Lesson 9:
+  1. Document Object Model(DOM)
+  2. document.querySelector(...)
+  3. .innerHTML, .innerText, .value
+  4. 3 mini projects using the DOM
+  5. onkeydown="..."
+  6. More details about strings + window object 
+
 
     -DOM combines JS and HTML together 
     method = function saved inside object

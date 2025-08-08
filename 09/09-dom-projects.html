@@ -54,16 +54,16 @@
       function calculateTotal() {
         const inputElement = document.querySelector('.js-input')
         // instead of using innerHTML or innerText, we use value to access information entered inside a input box 
-        let cost = (inputElement.value)
+        let cost = Number(inputElement.value) 
 
         // we have access to cost now, take the cost and do if statement to check if under 40 or not 
 
         if (cost < 40) {
           // turn cost into a integer
-          cost = Number(cost);
-          cost += 10 
+          cost = cost * 100
+          cost += 1000
           // turn cost back into a string 
-          cost = String(cost);
+          cost = cost / 100
         };
       
         document.querySelector('.js-totalCost').innerHTML = cost;
