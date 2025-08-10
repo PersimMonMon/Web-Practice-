@@ -104,4 +104,11 @@ Lesson 9:
     -onclick and onkeydown are event listeners 
     -clicks and keydowns are events 
 
+Lesson 10: 
+  
+    -classList is an object (has properties and methods we can use like .add() which adds a class to an element)
+    -How to change button when user clicks:
+      one solution:
+        1. add a class onto the button with classList + its add method which adds a class 
+        2. this class will have different styles
     

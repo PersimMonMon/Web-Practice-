@@ -5,9 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+      body{
+        font-family: Arial;
+      }
+
       div {
         padding: 20px 0px 20px 0px;
       }
+
+      /*black button, white text, 30ish radius borders*/
+      .js-subscribe-button {
+        background-color: black;
+        color: white;
+        width: 100px;
+        border-radius: 30px;
+        padding: 9px;
+        font-weight: bold;
+      }
+
+      .new-js-class-subscribed {
+        background-color: white;
+        color: black;
+        width: 100px;
+        border-radius: 30px;
+        padding: 9px;
+        font-weight: bold;
+      }
+
+      /*bigger height and length for input  */
+      .cost-input {
+        height: 30px;
+        width: 170px;
+        padding: 2px 2px 2px 6px;
+      }
+
+
+      /*same size as input, green blackground, white text */
+      #calculate-button {
+        height: 35px;
+        width: 90px;
+        background-color: rgb(12, 140, 12);
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      
     </style>
   </head>
 
@@ -32,10 +75,10 @@
       <p>Amazon Shipping Calculator</p>
       <p>Orders under $40 = +$10 shipping.</p>
       <p>Orders over $45 = FREE shipping.</p> 
-      <input class="js-input" placeholder="Cost of order" onkeydown="
+      <input class="js-input cost-input" placeholder="Cost of order" onkeydown="
         handleCostKeydown(event);
       "> <!--input is a void-->
-      <button onclick="
+      <button id="calculate-button" onclick="
         calculateTotal();
       ">
         Calculate
@@ -57,16 +100,19 @@
         let cost = Number(inputElement.value) 
 
         // we have access to cost now, take the cost and do if statement to check if under 40 or not 
-
-        if (cost < 40) {
+        
+        if (!cost) {
+          document.querySelector('.js-totalCost').innerHTML = (``);
+        } else if (cost < 40) {
           // turn cost into a integer
           cost = cost * 100
           cost += 1000
           // turn cost back into a string 
           cost = cost / 100
-        };
-      
-        document.querySelector('.js-totalCost').innerHTML = cost;
+          document.querySelector('.js-totalCost').innerHTML = (`$${cost}`);
+        } else {
+          document.querySelector('.js-totalCost').innerHTML = (`$${cost}`);
+        }
       };
       
 
@@ -76,8 +122,10 @@
 
         if (buttonElement.innerText === 'Subscribe') {
           buttonElement.innerHTML = 'Subscribed'
+          buttonElement.classList.add('new-js-class-subscribed')
         } else {
           buttonElement.innerHTML = 'Subscribe'
+          buttonElement.classList.remove('new-js-class-subscribed')
         }
       };
     </script>
