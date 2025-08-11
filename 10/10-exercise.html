@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .style-button {
+        background-color: rgb(26, 26, 25);
+        color: rgb(239, 233, 233);
+        width: 50px;
+        height: 30px;
+      }
+
+      .is-toggled {
+        background-color: rgb(239, 233, 233);
+        color: rgb(26, 25, 25);
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="js-button style-button" onclick="
+      changeButton();
+      ">
+      Sun
+    </button>
+
+    <script>
+      function changeButton() {
+        const getButton = document.querySelector('.js-button')
+
+        if (getButton.innerText === 'Sun') {
+          getButton.classList.add('is-toggled')
+          getButton.innerHTML = 'Moon'
+        } else if (getButton.classList.contains('is-toggled')){
+          getButton.classList.remove('is-toggled')
+          getButton.innerHTML = 'Sun'
+        }
+      }
+    </script>
+  </body>
+</html>

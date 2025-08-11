@@ -105,7 +105,11 @@ Lesson 9:
     -clicks and keydowns are events 
 
 Lesson 10: 
-  
+  1. Reviewed CSS, and added CSS to projects
+  2. .classList (used to add and remove classes, example is adding & removing Subscribed button)
+  3. Finished Rock Paper Scissors
+  4. Organize JavaScript and CSS code into separate files 
+
     -classList is an object (has properties and methods we can use like .add() which adds a class to an element)
     -How to change button when user clicks:
       one solution:
