@@ -50,6 +50,10 @@
         cursor: pointer;
       }
 
+      .new-style {
+        color: red;
+      }
+
       
     </style>
   </head>
@@ -101,8 +105,9 @@
 
         // we have access to cost now, take the cost and do if statement to check if under 40 or not 
         
-        if (!cost) {
-          document.querySelector('.js-totalCost').innerHTML = (``);
+        if (!cost || cost <= 0) {
+          document.querySelector('.js-totalCost').classList.add('new-style')
+          document.querySelector('.js-totalCost').innerHTML = (`Error: cannot be less than 0`);
         } else if (cost < 40) {
           // turn cost into a integer
           cost = cost * 100

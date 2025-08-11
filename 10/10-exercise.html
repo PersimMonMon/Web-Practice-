@@ -8,7 +8,7 @@
       .style-button {
         background-color: rgb(26, 26, 25);
         color: rgb(239, 233, 233);
-        width: 50px;
+        width: 80px;
         height: 30px;
       }
 
@@ -20,24 +20,68 @@
   </head>
 
   <body>
-    <button class="js-button style-button" onclick="
-      changeButton();
+    <button class="js-button1 style-button" onclick="
+      changeButton1();
       ">
-      Sun
+      Gaming
     </button>
 
-    <script>
-      function changeButton() {
-        const getButton = document.querySelector('.js-button')
+    
+    <button class="js-button2 style-button" onclick="
+      changeButton2();
+      ">
+      Music
+    </button>
 
-        if (getButton.innerText === 'Sun') {
-          getButton.classList.add('is-toggled')
-          getButton.innerHTML = 'Moon'
-        } else if (getButton.classList.contains('is-toggled')){
-          getButton.classList.remove('is-toggled')
-          getButton.innerHTML = 'Sun'
+    <button class="js-button3 style-button" onclick="
+      changeButton3();
+      ">
+      Tech
+    </button>
+  
+
+    <script>
+      function changeButton1() {
+        const getButton1 = document.querySelector('.js-button1')
+        const getButton2 = document.querySelector('.js-button2')
+        const getButton3 = document.querySelector('.js-button3')
+
+        if (!getButton1.classList.contains('is-toggled')) {
+          getButton2.classList.remove('is-toggled')
+          getButton3.classList.remove('is-toggled')
+          getButton1.classList.add('is-toggled')
+        } else if (getButton1.classList.contains('is-toggled')){
+          getButton1.classList.remove('is-toggled')
         }
-      }
+      };
+
+      function changeButton2() {
+        const getButton1 = document.querySelector('.js-button1')
+        const getButton2 = document.querySelector('.js-button2')
+        const getButton3 = document.querySelector('.js-button3')
+
+        if (!getButton2.classList.contains('is-toggled')) {
+          getButton1.classList.remove('is-toggled')
+          getButton3.classList.remove('is-toggled')
+          getButton2.classList.add('is-toggled')
+        } else if (getButton2.classList.contains('is-toggled')){
+          getButton2.classList.remove('is-toggled')
+        }
+      };
+
+      function changeButton3() {
+        const getButton1 = document.querySelector('.js-button1')
+        const getButton2 = document.querySelector('.js-button2')
+        const getButton3 = document.querySelector('.js-button3')
+
+        if (!getButton3.classList.contains('is-toggled')) {
+          getButton1.classList.remove('is-toggled')
+          getButton2.classList.remove('is-toggled')
+          getButton3.classList.add('is-toggled')
+        } else if (getButton3.classList.contains('is-toggled')){
+          getButton3.classList.remove('is-toggled')
+        }
+      };
     </script>
   </body>
 </html>
