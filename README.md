@@ -135,3 +135,8 @@ Lesson 11:
     While vs For Loop
       -Standard loop -> for (use when you know loop count)
       -Non-standard loop -> while (use when unknown loop count)
+
+    3 step process when creating website 
+      1. Save the data (ex: save data into array)
+      2. Generate the HTML
+      3. Make it interactive
