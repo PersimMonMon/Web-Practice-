@@ -115,4 +115,14 @@ Lesson 10:
       one solution:
         1. add a class onto the button with classList + its add method which adds a class 
         2. this class will have different styles
-    
+
+Lesson 11: 
+
+    ARRAYS (acts similar to a list in python)
+      -another type of value 
+      -represents a list of values 
+      -a special type of object 
+
+    ARRAY METHODS
+      - .push(200)      adds 200 to end of array
+      - .splice(x, y)   2 inputs: removed index (x), # of values to remove (y)
