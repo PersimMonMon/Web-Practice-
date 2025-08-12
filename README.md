@@ -126,3 +126,12 @@ Lesson 11:
     ARRAY METHODS
       - .push(200)      adds 200 to end of array
       - .splice(x, y)   2 inputs: removed index (x), # of values to remove (y)
+
+    LOOPS (while loops and for loops)
+      -creates a scope 
+      -contains loop variable, loop condition, increment step 
+      - for loop format: for (loop variable, loop condition, alter variable(ex:i++)) {}
+
+    While vs For Loop
+      -Standard loop -> for (use when you know loop count)
+      -Non-standard loop -> while (use when unknown loop count)
