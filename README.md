@@ -18,7 +18,7 @@ Lesson 6:
 6. Shortscuts for if-statements (ternary, guard, default)
 
 Lesson 7:
-  1. Functions = let us reuse code
+  1. Functions = lets us reuse code
   2. Return = get a value out of a function 
   3. Parameters = put values into a function
   4. Improved the code for Rock, Paper, Scissors 
@@ -126,6 +126,7 @@ Lesson 11:
     ARRAY METHODS
       - .push(200)      adds 200 to end of array
       - .splice(x, y)   2 inputs: removed index (x), # of values to remove (y)
+      - .includes       checks if array contains a value (can't use on objects)
 
     LOOPS (while loops and for loops)
       -creates a scope 
