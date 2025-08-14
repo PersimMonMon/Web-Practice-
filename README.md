@@ -117,11 +117,18 @@ Lesson 10:
         2. this class will have different styles
 
 Lesson 11: 
+  1. Arrays = list of values
+  2. Loops (while loop, for loop)
+  3. Accumulator Pattern
+  4. Created a Todo List project
+  5. Arrays are references, destructuring
+  6. More features of loops: break, continuem loops inside a function
 
     ARRAYS (acts similar to a list in python)
       -another type of value 
       -represents a list of values 
       -a special type of object 
+      -are references
 
     ARRAY METHODS
       - .push(200)      adds 200 to end of array
@@ -132,6 +139,8 @@ Lesson 11:
       -creates a scope 
       -contains loop variable, loop condition, increment step 
       - for loop format: for (loop variable, loop condition, alter variable(ex:i++)) {}
+      -break in a loop lets us exit loop early
+      -continue in a loop skips 1 iteration
 
     While vs For Loop
       -Standard loop -> for (use when you know loop count)
@@ -141,3 +150,5 @@ Lesson 11:
       1. Save the data (ex: save data into array)
       2. Generate the HTML
       3. Make it interactive
+
+    -by default, align-items (property in grid) alters stretch
