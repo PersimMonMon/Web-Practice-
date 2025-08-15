@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lesson 11 Part 2 Exercises</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            // take in array of strings, loop over the array and check if the string 'search' is inside the array. if it is, display on console the index of 'search' in the array. otherwise return -1 to console. 
+            function findSearch(array) {
+                let target = 'search';
+                let found = false
+                // loop the array
+                for (let i = 0; i < array.length; i++) {
+                    let current = array[i];
+                    if (current === target) {
+                        console.log(i);
+                        found = true;
+                        break; // break lets us exit loop early 
+                    };
+                };
+                if (found === false) {
+                    console.log('-1');
+                };
+            };
+
+            findSearch(['hello', 'world', 'search', 'good', 'search']);
+            findSearch(['not', 'found']);
+
+            // function takes in two parameters (array and a word), use word to see if it's present in the array. return index if exist, else -1 
+            function findIndex(array,word) {
+                let target = word;
+                let found = false
+                // loop the array
+                for (let i = 0; i < array.length; i++) {
+                    let current = array[i];
+                    if (current === target) {
+                        console.log(i);
+                        found = true;
+                        break; // break lets us exit loop early 
+                    };
+                };
+                if (found === false) {
+                    console.log('-1');
+                };
+            };
+
+            findIndex(['green', 'red', 'blue', 'red'], 'red');
+            findIndex(['green', 'red', 'blue', 'red'], 'yellow');
+
+            // function takes in an array of strings and returns an array where the string 'egg' is removed 
+
+            function removeEgg(foods) {
+                let target = 'egg';
+                let newList = [];
+                let count = 0;
+                for (let i = 0; i < foods.length; i++) {
+                    if (target === foods[i] && count < 2) {
+                        count ++;
+                        continue;
+                    } else {
+                        newList.push(foods[i]);
+                    };
+                };
+                return newList;
+            };
+
+            console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+            console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+            function removeLastTwo(foods) {
+                let safeCopy = foods.slice();
+                let reverseList = safeCopy.reverse();
+                let target = 'egg';
+                let counter = 0;
+                let newList = [];
+                
+                for (let i = 0; i < reverseList.length; i++) {
+                    if (target === reverseList[i] && counter < 2){
+                        counter ++;
+                        continue;
+                    } else {
+                        newList.push(reverseList[i]);
+                    };
+                };
+                return newList.reverse();
+            };
+
+            foods2 = ['egg', 'apple', 'egg', 'egg', 'ham']
+            console.log(removeLastTwo(foods2));
+            console.log(foods2);
+
+            // make loop display 1 to 20, if divisible by 3 -> 'Fizz'  divisible by 5 ---> 'Buzz'   divisible by both ---> 'FizzBuzz'
+            for (let i = 1; i <= 20; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    console.log('FizzBuzz');
+                } else if (i % 5 === 0) {
+                    console.log('Buzz');
+                } else if (i % 3 === 0) {
+                    console.log('Fizz');
+                } else {
+                // at end of all if statement print the number i
+                console.log(i)    
+                };                
+            };
+ 
+        </script>
+
+    </body>
+</html>
