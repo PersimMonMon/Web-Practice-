@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 12 Advanced Functions Part 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <script>
+      /*
+      // a named function set to a variable
+      const function0 = function greeting() {
+        console.log('hello2');
+      };
+      function0();
+
+      // a anonymous function, similar line to above
+      const function1 = function() {
+        console.log('hello2');
+      };
+
+      // passing function into a function 
+      function something(param) {
+        param();
+      };
+      something(function haha() {   // function we're passing in is called a callback
+        console.log('hello');
+      });
+      */
+
+      //asynchronous code 
+      setTimeout(function() {
+        console.log('timeout')
+        console.log('timeout2')
+      }, 3000);
+
+      console.log('next line');
+
+      setInterval(function() {
+        console.log('interval');
+      }, 3000);
+
+      console.log('next line 2')
+
+    </script>
+  </body>
+</html>

@@ -153,3 +153,26 @@ Lesson 11:
       3. Make it interactive
 
     -by default, align-items (property in grid) alters stretch
+  
+  Lesson 12:
+
+    Notes:
+      Reiew: 
+        -Types of values: numbers, strings, booleans
+        -Functions are also values 
+        -can use functions within objects (aka method)
+        -create anonymous functions (functions w/o name)
+        -function passed to a function (function passed is called a callback)
+      
+      JS feature: setTimeout(), allows us run function in future
+        -takes 2 parameters: function in future and how long to wait before running this function (in ms, 1000ms = 1 second)
+        -an asynchronous code = won't line for line to finish before going to next line 
+          -benefit: doesn't block our other code from running 
+      
+      JS feature: setInterval()
+        -similar parameters to setTimeout(): function and time in ms
+        -keeps running every interval you set time to 
+        -returns a number, we can use this to stop the interval (so set let intervalId = setInterval(), then use the return of setInterval to input into clearInterval(parameter) to stop interval)
+      
+      Synchronous code = will wait for line to finish before going to next line (default)
+      
