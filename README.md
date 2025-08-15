@@ -134,6 +134,7 @@ Lesson 11:
       - .push(200)      adds 200 to end of array
       - .splice(x, y)   2 inputs: removed index (x), # of values to remove (y)
       - .includes       checks if array contains a value (can't use on objects)
+      - .reverse()      to reverse an array (Note: also reverses original array)
 
     LOOPS (while loops and for loops)
       -creates a scope 
