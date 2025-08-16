@@ -27,7 +27,7 @@
       something(function haha() {   // function we're passing in is called a callback
         console.log('hello');
       });
-      */
+      
 
       //asynchronous code 
       setTimeout(function() {
@@ -42,6 +42,21 @@
       }, 3000);
 
       console.log('next line 2')
+      */
+
+      [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ].forEach(function(value, index) {
+        if (value === 'wash dishes') {
+          return; // will end function early (does something thing as continue)
+        };
+        console.log(value);
+        console.log(index);
+      });
+
+
 
     </script>
   </body>

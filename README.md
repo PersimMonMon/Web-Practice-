@@ -175,4 +175,8 @@ Lesson 11:
         -returns a number, we can use this to stop the interval (so set let intervalId = setInterval(), then use the return of setInterval to input into clearInterval(parameter) to stop interval)
       
       Synchronous code = will wait for line to finish before going to next line (default)
+
+      -can use .forEach() method of array to loop an arrray
+        -if you add a function inside with parameter inside .forEach() it will save value of each item in array and run it 
+        -preferred method to loop through an array, easiar to read than a for loop
       
