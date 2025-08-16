@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="12-todo-list.css">
+  </head>
+
+  <body>
+
+    
+    <!-- Take user input, add them into an array -->
+    <p>Todo List Practice 1</p>
+    <input class='js-input' placeholder="Todo name">
+    <button onclick="
+      updateArray();
+    ">
+      Add 
+    </button>
+
+    <p>Todo List Practice 2</p>
+    <div class="todo-input-grid">
+      <input class='js-input2 name-input' placeholder="Todo name" onkeydown="
+      triggerButton(event);
+      ">
+      <input class='js-input3 due-date-input' type="date">
+      <button class='addButton' onclick="
+        updateArray2();
+      ">
+        Add 
+      </button>
+    </div>
+
+    <div class="js-todoList todo-grid"></div>
+
+
+
+    <script src="../scripts/12-todo-list.js">
+    </script>
+  </body>
+</html>
