@@ -181,4 +181,25 @@ Lesson 11:
         -preferred method to loop through an array, easiar to read than a for loop
         -use return instead of continue to skip one iteration
         -not possible to break inside a .forEach(), so use for loop instead
+
+      ARROW FUNCTIION
+        -works same as regular functions
+        -has shortcuts regulat functions don't have 
+          -if it has one parameter, it does not need () 
+            -example: const oneParam = param => {}
+          -if code is one line, you can remove {} and return statements 
+            -example: const oneLine = () => 2 + 3;
+        -can do name(){} inside an object (shortcut to make arrow function in objects) instead of doing name: () => {}
+
+      -every HTML element has a method called .addEventListener() which lets us rune code when we interact with element (similar to onclick)
+        -parameter of addEventListener() 
+          -1. event (the word after on is the event so for onclick the event would be click )
+          -2. param number two is a function we want to run 
+      
+      -addEventListerner() ADVANTAGES over attributes (use this over onclick)
+        1. multiple event listeners for an event (can have multiple click events happen at same time)
+        2. we can remove an event listener 
+          -done by using .removeEventListener() -> parameters event and function 
+
+
       

@@ -29,7 +29,7 @@ function renderList() {
   let i = 0;
   let text = '';
 
-  todoList.forEach(function(todoObject, index) {
+  todoList.forEach((todoObject, index) => {
     html = `
     <div>${todoObject.name}</div>
     <div>${todoObject.date}</div>
