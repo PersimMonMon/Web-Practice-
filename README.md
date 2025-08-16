@@ -179,4 +179,6 @@ Lesson 11:
       -can use .forEach() method of array to loop an arrray
         -if you add a function inside with parameter inside .forEach() it will save value of each item in array and run it 
         -preferred method to loop through an array, easiar to read than a for loop
+        -use return instead of continue to skip one iteration
+        -not possible to break inside a .forEach(), so use for loop instead
       
