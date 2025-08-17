@@ -176,11 +176,25 @@ Lesson 11:
       
       Synchronous code = will wait for line to finish before going to next line (default)
 
+      ARRAY METHODS
       -can use .forEach() method of array to loop an arrray
-        -if you add a function inside with parameter inside .forEach() it will save value of each item in array and run it 
+        -parameter: is just a function
+          - that function contains multiple parameters
+            1. value of current element being processed by array
+            2. index (the current element in array)
+        -value of each item in array and run it 
         -preferred method to loop through an array, easiar to read than a for loop
         -use return instead of continue to skip one iteration
         -not possible to break inside a .forEach(), so use for loop instead
+      
+      -.filter() has same parameters as .forEach(). It takes in a function and that function's parameters is a value and index. Only difference is that filter will return a value at the end of the function 
+        1. creates a new array []
+        2. if return true -> put value in array
+        3. return false -> will not put value in array
+
+      -.map() has same parameters as .filter() and .forEach()
+        1. creates a new array []
+        2. whatever we return -> added to new array 
 
       ARROW FUNCTIION
         -works same as regular functions
@@ -191,7 +205,7 @@ Lesson 11:
             -example: const oneLine = () => 2 + 3;
         -can do name(){} inside an object (shortcut to make arrow function in objects) instead of doing name: () => {}
 
-      -every HTML element has a method called .addEventListener() which lets us rune code when we interact with element (similar to onclick)
+      -every HTML element has a method called .addEventListener() which lets us run code when we interact with element (similar to onclick)
         -parameter of addEventListener() 
           -1. event (the word after on is the event so for onclick the event would be click )
           -2. param number two is a function we want to run 
@@ -200,6 +214,12 @@ Lesson 11:
         1. multiple event listeners for an event (can have multiple click events happen at same time)
         2. we can remove an event listener 
           -done by using .removeEventListener() -> parameters event and function 
+
+      -document.querySelectorAll will target all element with that class name 
+      -if function has a shortend one line code you can remove {} and return statements 
+
+      CLOSURE (feature of functions)
+        -if a function has access to a value, it will always have access to that value
 
 
       

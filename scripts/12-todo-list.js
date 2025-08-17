@@ -8,6 +8,8 @@ function updateArray() {
   document.querySelector('.js-input').value = '';
 }
 
+document.querySelector('.js-add-button').addEventListener('click', () => updateArray2());
+
 function updateArray2() {
   const userInput = document.querySelector('.js-input2').value 
   const userInput3 = document.querySelector('.js-input3').value 
@@ -33,13 +35,17 @@ function renderList() {
     html = `
     <div>${todoObject.name}</div>
     <div>${todoObject.date}</div>
-    <button onclick="
-      todoList.splice(${index},1);
-      renderList();
-    " class="delete-todo-button">Delete</button>
+    <button class="delete-todo-button js-delete-todo-button">Delete</button>
     `;
     text += html 
-    document.querySelector('.js-todoList').innerHTML = text;
+  });
+  document.querySelector('.js-todoList').innerHTML = text;
+
+  document.querySelectorAll('.js-delete-todo-button').forEach((deleteButton, index) => {
+    deleteButton.addEventListener('click', () => {
+      todoList.splice(index, 1);
+      renderList();
+    });
   });
 };
 
