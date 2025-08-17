@@ -46,7 +46,7 @@ function renderList() {
       todoList.splice(index, 1);
       renderList();
     });
-  });
+  }); 
 };
 
 function triggerButton(event) {

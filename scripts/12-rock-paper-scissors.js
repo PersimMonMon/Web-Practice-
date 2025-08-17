@@ -108,6 +108,30 @@ function resetScore() {
 let isAutoPlay = false
 let intervalId;
 
+let autoPlaying = false;
+document.querySelector('.js-autoplay-button').addEventListener('click', () =>{
+  if (!autoPlaying) {
+    autoPlaying = true;
+    document.querySelector('.js-autoplay-button').innerText = 'Stop Playing'; 
+  } else {
+    document.querySelector('.js-autoplay-button').innerText = 'Auto Play';
+    autoPlaying = false;
+  };
+  autoPlay();
+});
+
+document.querySelector('.js-listen').addEventListener('keydown', (event) => {
+  if (event.key === 'a') {
+      if (!autoPlaying) {
+    autoPlaying = true;
+    document.querySelector('.js-autoplay-button').innerText = 'Stop Playing'; 
+  } else {
+    document.querySelector('.js-autoplay-button').innerText = 'Auto Play';
+    autoPlaying = false;
+  };
+    autoPlay();
+  }});
+
 function autoPlay() {
   if (!isAutoPlay) {
       intervalId = setInterval(() => {

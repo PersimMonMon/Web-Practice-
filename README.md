@@ -155,8 +155,13 @@ Lesson 11:
     -by default, align-items (property in grid) alters stretch
   
   Lesson 12:
+    1. Functions are values
+    2. setTimeout(), setInterval()
+    3. .forEach()
+    4. Arrow functions, .addEventListener()
+    5. .filter(), .map()
+    6. Closure
 
-    Notes:
       Reiew: 
         -Types of values: numbers, strings, booleans
         -Functions are also values 
